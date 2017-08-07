@@ -30,6 +30,7 @@ Route::post('/uploaded', 'HomeController@uploaded');
 Route::get('/employes', 'employesController@employes');
 Route::post('/employes', 'employesController@employes');
 Route::get('/show_cv/{id}', 'employesController@show_cv')->middleware('auth');
+Route::post('/recherche_employes','employesController@recherche_employes');
 
 Route::get('/personel', 'personelController@personel')->middleware('auth');
 Route::get('/page_principale', 'HomeController@page_principale');

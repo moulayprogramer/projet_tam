@@ -48,4 +48,15 @@ class employesController extends Controller
 		 $arr=Array('employe'=>$employe);
 		return view('Les pages.show_cv',$arr);
 	}
+	public function recherche_employes(Request $request){
+        $wilaya = $request->input('wilaya');
+        $niveau = $request->input('niveau');
+        $domain = $request->input('domain');
+        $experience = $request->input('experience');
+
+        $arr =  Array('wilaya'=>$wilaya);
+
+        return view('Les pages.test',$arr);
+
+    }
 }
