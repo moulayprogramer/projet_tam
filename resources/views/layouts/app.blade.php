@@ -106,9 +106,9 @@ $(document).ready(function(){
                       <a style="font-size: 10px ;" class="visible-sm-block" href="/travaille"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض الوظائف </a></li>
                   <li><a class="hidden-sm" href="/employes"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض العمال  </a>
                       <a style="font-size: 10px ;" class="visible-sm-block" href="/employes"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض العمال  </a></li>
-                  @if (!(Auth::guest()))
-                      <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a>
-                          <a style="font-size: 10px ;" class="visible-sm-block" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a></li>
+                  @if (Auth::check())
+
+                          <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a>
                   @endif
 
 

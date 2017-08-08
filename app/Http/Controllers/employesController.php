@@ -53,10 +53,67 @@ class employesController extends Controller
         $niveau = $request->input('niveau');
         $domain = $request->input('domain');
         $experience = $request->input('experience');
+        if (!empty($wilaya) && !empty($niveau) && !empty($domain) && !empty($experience)){
+            #code ...
+        }else{
+            if (!empty($wilaya) && !empty($niveau) && !empty($domain) && empty($experience)){
+                #code ...
+            }else{
+                if (!empty($wilaya) && !empty($niveau) && empty($domain) && !empty($experience)){
+                    #code ...
+                }else{
+                    if (!empty($wilaya) && !empty($niveau) && empty($domain) && empty($experience)){
+                        #code ...
+                    }else{
+                        if (!empty($wilaya) && empty($niveau) && !empty($domain) && !empty($experience)){
+                            #code ...
+                        }else{
+                            if (!empty($wilaya) && empty($niveau) && !empty($domain) && empty($experience)){
+                                #code ...
+                            }else{
+                                if (!empty($wilaya) && empty($niveau) && empty($domain) && !empty($experience)){
+                                    #code ...
+                                }else{
+                                    if (!empty($wilaya) && empty($niveau) && empty($domain) && empty($experience)){
+                                        #code ...
+                                    }else{
+                                        if (empty($wilaya) && !empty($niveau) && !empty($domain) && !empty($experience)){
+                                            #code ...
+                                        }else{
+                                            if (empty($wilaya) && !empty($niveau) && !empty($domain) && empty($experience)){
+                                                #code ...
+                                            }else{
+                                                if (empty($wilaya) && !empty($niveau) && empty($domain) && !empty($experience)){
+                                                    #code ...
+                                                }else{
+                                                    if (empty($wilaya) && !empty($niveau) && empty($domain) && empty($experience)){
+                                                        #code ...
+                                                    }else{
+                                                        if (empty($wilaya) && empty($niveau) && !empty($domain) && !empty($experience)){
+                                                            #code ...
+                                                        }else{
+                                                            if (empty($wilaya) && empty($niveau) && !empty($domain) && empty($experience)){
+                                                                #code ...
+                                                            }else{
+                                                                if (empty($wilaya) && empty($niveau) && empty($domain) && !empty($experience)){
+                                                                    #code ...
+                                                                }else{
+                                                                   #code ...
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
 
-        $arr =  Array('wilaya'=>$wilaya);
-
-        return view('Les pages.test',$arr);
-
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
