@@ -48,3 +48,5 @@ Route::get('/ajaxCommune',function(){
 	$BD_commune=Baladia::where('id_daira','=',$daira_id)->get();
 	return Response::json($BD_commune);
 });
+
+Route::get('admin','adminController@index');
