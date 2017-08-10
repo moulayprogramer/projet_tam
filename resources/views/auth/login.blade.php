@@ -53,12 +53,10 @@
                         <div class="row">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    دخول 
+                                    دخول
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    نسيت الرقم السري !
-                                </a>
+                                <a class="btn btn-link" href="{{ route('password.request') }}">نسيت الرقم السري !</a>
                             </div>
                         </div>
                     </form>
