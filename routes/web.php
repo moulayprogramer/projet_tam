@@ -49,8 +49,3 @@ Route::get('/ajaxCommune',function(){
 	return Response::json($BD_commune);
 });
 
-Route::get('admin','adminController@index');
-Route::get('admin/login','Auth\AdminLogincontroller@showLoginForm');
-Route::post('admin/login','Auth\AdminLogincontroller@login');
-Route::get('admin/register','Auth\AdminLogincontroller@register');
-Route::post('admin/register','Auth\AdminLogincontroller@register');
