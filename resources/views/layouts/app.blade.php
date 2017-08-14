@@ -25,6 +25,7 @@
 	  $("#personel a:contains(' الصفحة الشخصية ')").parent().addClass('active');
 	  $("#inscription a:contains(' التسجيل')").parent().addClass('active');
 	  $("#login a:contains(' دخول ')").parent().addClass('active');
+
 		  		  
 
 	   });
@@ -106,10 +107,19 @@ $(document).ready(function(){
                       <a style="font-size: 10px ;" class="visible-sm-block" href="/travaille"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض الوظائف </a></li>
                   <li><a class="hidden-sm" href="/employes"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض العمال  </a>
                       <a style="font-size: 10px ;" class="visible-sm-block" href="/employes"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض العمال  </a></li>
-                  @if (Auth::check())
 
+                  @if (Auth::guard('admin')->check())
                           <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a>
+                             <a style="font-size: 10px ;" class="visible-sm-block" href="/personel" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> الصفحة الشخصية</a></li>
+
+                      <li class="@yield('active')"><a class="hidden-sm" href="{{route('admin.home')}}"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> لوحة تحكم الادمين </a>
+                      <a style="font-size: 10px ;" class="visible-sm-block" href="{{route('admin.home')}}" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  لوحة تحكم الادمين</a></li>
+                  @elseif(Auth::guard('web')->check())
+                          <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a></li>
+                          <a style="font-size: 10px ;" class="visible-sm-block" href="/personel" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> الصفحة الشخصية</a></li>
                   @endif
+
+
 
 
 
@@ -132,7 +142,7 @@ $(document).ready(function(){
                                   <a href="{{ route('logout') }}"
                                      onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                      Logout
+                                      تسجيل الخروج
                                   </a>
 
                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -166,13 +176,22 @@ $(document).ready(function(){
 
 
 	<!---->
-	  
+
+
+
 	  <div class="container-fluid">
   <div class="row ">
-    <div class="ilan col-sm-2 hidden-xs " ><img src='{{ asset('images/18.gif') }}' width="100%"></div>
-    <div class="col-xs-12 col-sm-10 text-center " >
-		
-		
+      @if(Auth::guard('admin')->guest())
+         <div class="ilan col-sm-2 hidden-xs " ><img src='{{ asset('images/18.gif') }}' width="100%"></div>
+          <div class="col-xs-12 col-sm-10 text-center " >
+      @else
+          <div class="col-xs-12 col-sm-12 text-center " >
+              @endif
+
+
+
+
+
 
 		 @yield('content')
 		
