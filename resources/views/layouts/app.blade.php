@@ -109,8 +109,8 @@ $(document).ready(function(){
                       <a style="font-size: 10px ;" class="visible-sm-block" href="/employes"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> عرض العمال  </a></li>
 
                   @if (Auth::guard('admin')->check())
-                          <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a>
-                             <a style="font-size: 10px ;" class="visible-sm-block" href="/personel" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> الصفحة الشخصية</a></li>
+                     <!--     <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a>
+                             <a style="font-size: 10px ;" class="visible-sm-block" href="/personel" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> الصفحة الشخصية</a></li>-->
 
                       <li class="@yield('active')"><a class="hidden-sm" href="{{route('admin.home')}}"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> لوحة تحكم الادمين </a>
                       <a style="font-size: 10px ;" class="visible-sm-block" href="{{route('admin.home')}}" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  لوحة تحكم الادمين</a></li>

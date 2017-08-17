@@ -59,3 +59,8 @@ Route::POST('admin-password/reset','Admin\ResetPasswordController@reset');
 Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 Route::POST('admin/register','Admin\RegisterController@register');
 Route::GET('admin/register','Admin\RegisterController@showRegistrationForm')->name('admin.register');
+
+//facebook login
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');

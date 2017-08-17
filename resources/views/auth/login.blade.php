@@ -55,6 +55,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     دخول
                                 </button>
+                                <a class="btn btn-primary" href="{{route('facebook')}}">دخول بواسطة facebook</a>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">نسيت الرقم السري !</a>
                             </div>
