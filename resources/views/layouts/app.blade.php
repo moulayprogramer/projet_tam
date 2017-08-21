@@ -29,53 +29,56 @@
 		  		  
 
 	   });
-	  
-$(document).ready(function(){
-    $("#s_info").click(function(){
-        $("#info").slideDown("slow");
-		 $("#khebra").hide(1000);
-		$("#moahelat").hide(1000);
-		$("#talim").hide(1000);
-		$("#ihtimamat").hide(1000);
-		
-    });
-});
-	$(document).ready(function(){
-    $("#s_khebra").click(function(){
-        $("#khebra").slideDown("slow");
-		 $("#info").hide(1000);
-		$("#moahelat").hide(1000);
-		$("#talim").hide(1000);
-		$("#ihtimamat").hide(1000);
-    });
-});
-	  $(document).ready(function(){
-    $("#s_moahelat").click(function(){
-        $("#moahelat").slideDown("slow");
-		 $("#info").hide(1000);
-		$("#khebra").hide(1000);
-		$("#talim").hide(1000);
-		$("#ihtimamat").hide(1000);
-    });
-});
-	  $(document).ready(function(){
-    $("#s_talim").click(function(){
-        $("#talim").slideDown("slow");
-		 $("#info").hide(1000);
-		$("#khebra").hide(1000);
-		$("#moahelat").hide(1000);
-		$("#ihtimamat").hide(1000);
-    });
-});
-	   $(document).ready(function(){
-    $("#s_ihtimamat").click(function(){
-        $("#ihtimamat").slideDown("slow");
-		 $("#info").hide(1000);
-		$("#khebra").hide(1000);
-		$("#moahelat").hide(1000);
-		$("#talim").hide(1000);
-    });
-});
+
+      $(document).ready(function(){
+          $("#s_info").click(function(){
+              $("#info").slideDown("slow");
+              $("#khebra").hide(1000);
+              $("#moahelat").hide(1000);
+              $("#talim").hide(1000);
+
+          });
+      });
+      $(document).ready(function(){
+          $("#s_khebra").click(function(){
+              $("#khebra").slideDown("slow");
+              $("#info").hide(1000);
+              $("#moahelat").hide(1000);
+              $("#talim").hide(1000);
+          });
+      });
+      $(document).ready(function(){
+          $("#s_moahelat").click(function(){
+              $("#moahelat").slideDown("slow");
+              $("#info").hide(1000);
+              $("#khebra").hide(1000);
+              $("#talim").hide(1000);
+          });
+      });
+      $(document).ready(function(){
+          $("#s_talim").click(function(){
+              $("#talim").slideDown("slow");
+              $("#info").hide(1000);
+              $("#khebra").hide(1000);
+              $("#moahelat").hide(1000);
+          });
+      });
+      $(document).ready(function(){
+          $("#r_moahilat").click(function(){
+              $("#moahelat").slideDown("slow");
+              $("#info").hide(1000);
+              $("#khebra").hide(1000);
+              $("#talim").hide(1000);
+          });
+      });
+      $(document).ready(function(){
+          $("#r_khebra").click(function(){
+              $("#khebra").slideDown("slow");
+              $("#info").hide(1000);
+              $("#moahelat").hide(1000);
+              $("#talim").hide(1000);
+          });
+      });
 </script>
 	  
 	  
