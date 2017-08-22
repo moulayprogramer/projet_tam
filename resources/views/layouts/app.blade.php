@@ -16,6 +16,8 @@
     <link href="{{ asset('css/bootstrap-rtl.css') }}" rel="stylesheet">
   	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 	  <script src="{{ asset('js/jquery.min.js') }}"></script>
+      <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet">
+
 
   <script>
 	  $(document).ready(function(){
@@ -184,23 +186,11 @@
 
 	  <div class="container-fluid">
   <div class="row ">
-      @if(Auth::guard('admin')->guest())
-         <div class="ilan col-sm-2 hidden-xs " ><img src='{{ asset('images/18.gif') }}' width="100%"></div>
+         <div class="ilan col-sm-2 hidden-xs " >
+             <img src='{{ asset('images/18.gif') }}' width="100%">
+         </div>
           <div class="col-xs-12 col-sm-10 text-center " >
-      @else
-          <div class="col-xs-12 col-sm-12 text-center " >
-              @endif
-
-
-
-
-
-
 		 @yield('content')
-		
-		
-		
-		
 	  </div>  <!-- end div col-sm-10 -->
   </div>
 </div>

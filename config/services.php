@@ -39,4 +39,9 @@ return [
         'client_secret' => '43d14be5e7b9957cea48075ddd65cd93',
         'redirect' => 'http://localhost:8000/login/facebook/callback',
     ],
+    'nexmo' => [
+        'key' => 'e87c9a42',
+        'secret' => '6e47491f50ee9996 ',
+        'sms_from' => 'Projet_Tam',
+    ],
 ];
