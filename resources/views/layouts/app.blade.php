@@ -120,7 +120,7 @@
                       <li class="@yield('active')"><a class="hidden-sm" href="{{route('admin.home')}}"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> لوحة تحكم الادمين </a>
                       <a style="font-size: 10px ;" class="visible-sm-block" href="{{route('admin.home')}}" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span>  لوحة تحكم الادمين</a></li>
                   @elseif(Auth::guard('web')->check())
-                          <li><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a></li>
+                          <li class="@yield('personelact')"><a class="hidden-sm" href="/personel"><span class="glyphicon glyphicon-bishop" aria-hidden="true"></span> الصفحة الشخصية </a></li>
                           <a style="font-size: 10px ;" class="visible-sm-block" href="/personel" ><span class="glyphicon glyphicon-home" aria-hidden="true"></span> الصفحة الشخصية</a></li>
                   @endif
 
@@ -138,8 +138,10 @@
                           <a style="font-size: 10px ;" class="visible-sm-block" href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> دخول </a></li>
                   @else
                       <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative; padding-right: 70px;">
+
                               {{ Auth::user()->name }} <span class="caret"></span>
+                              <img src="/avatar/{{ Auth::user()->avatar }}" style=" width: 40px; height: 40px; position: absolute; top: 10px; right: 10px; border-radius: 50%;">
                           </a>
 
                           <ul class="dropdown-menu" role="menu">

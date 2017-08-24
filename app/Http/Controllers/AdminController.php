@@ -9,7 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use Auth;
-
+use Intervention\Image\ImageManagerStatic as Image;
 
 
 class AdminController extends Controller
@@ -55,6 +55,33 @@ class AdminController extends Controller
         $registered_today =  User::where('created_at' ,'like' ,$current_date.'%')->paginate(10);
         $arr = Array('user'=>Auth::user(),'registered_today'=> $registered_today);
         return view('admin.admin pages.registered_today_list',$arr);
+    }
+
+    /**
+     * @param Request $request
+     */
+    public  function update_avatar(Request $request){
+        if ($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time().'.'. $avatar->getClientOriginalExtension();
+            $path = public_path('/avatar/'.$filename);
+            Image::make($avatar)->resize(300,300)->save($path);
+
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+            return redirect('/admin');
+        }else{
+            $error = 'you are not chose any file';
+             echo "<div class='alert alert-success' role='alert'>
+            <strong>Ooooops !!</strong>
+             $error </div>
+            ";
+        }
+    }
+    public function edit_account(){
+        $arr = Array('user'=>Auth::user());
+        return view('admin.admin pages.edit_account',$arr);
     }
 
 }

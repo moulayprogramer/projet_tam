@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.user_layouts')
+@section('act_us_3','active')
+@section('user_dash')
 
-@section('content')
-    <body id="personel">
     <section id="aaa" class="cv text-center">
         <div class="page-header ">
             <h1 style="font-family:monospace;">أنشئ سيرتك الذاتية</h1>
@@ -284,5 +284,5 @@
 
         </div>
     </section>
-    </body>
+
 @endsection

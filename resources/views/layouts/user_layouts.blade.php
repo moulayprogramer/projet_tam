@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('active','active')
+@section('personelact','active')
 @section('content')
 
 
@@ -11,13 +11,13 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="/avatar/{{ $user->avatar }} " class="img-responsive" alt="">
+                    <img src="/avatar/{{ Auth::user()->avatar }} " class="img-responsive" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        {{$user->name}}
+                        {{Auth::user()->name}}
                     </div>
                     <!--    <div class="profile-usertitle-job">
                             Developer
@@ -25,33 +25,33 @@
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
-           <!--    <div class="profile-userbuttons">
+                <!--    <div class="profile-userbuttons">
 
 
-                </div>-->
+                     </div>-->
                 <!-- END SIDEBAR BUTTONS -->
                 <!-- SIDEBAR MENU -->
                 <div class="profile-usermenu">
                     <ul class="nav">
-                        <li class="@yield('act_ad_1')">
-                            <a href="{{ route('admin.home') }}">
+                        <li class="@yield('act_us_1')">
+                            <a href="/personel">
                                 <i class="glyphicon glyphicon-home"></i>
                                 الرئيسية </a>
                         </li>
-                        <li class="@yield('act_ad_2')">
-                            <a href="/admin/edit_account">
+                        <li class="@yield('act_us_2')">
+                            <a href="/user/edit_account">
                                 <i class="glyphicon glyphicon-cog"></i>
                                 تعديل الحساب </a>
                         </li>
-                        <li class="@yield('act_ad_3')">
-                            <a href="#">
+                        <li class="@yield('act_us_3')">
+                            <a href="/cv">
                                 <i class="glyphicon glyphicon-ok"></i>
-                                Tasks </a>
+                                انشئ سيرتك الذاتية </a>
                         </li>
-                        <li class="@yield('act_ad_4')">
-                            <a href="#">
-                                <i class="glyphicon glyphicon-flag"></i>
-                                Help </a>
+                        <li class="@yield('act_us_4')">
+                            <a href="/demend_de_emp">
+                                <i class="glyphicon glyphicon-ok"></i>
+                                انشئ طلب عمال  </a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
         <div class="col-md-9">
             <div class="profile-content">
 
-                @yield('admin_dash')
+                @yield('user_dash')
             </div>
         </div>
     </div>

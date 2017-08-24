@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.user_layouts')
+@section('act_us_4','active')
+@section('user_dash')
 
-@section('content')
-<body id="personel">
 <section id="aaa" class="cv text-center">
 	<div class="row">
   <div class="col-sm-6 col-sm-push-3">
@@ -174,5 +174,5 @@
 	 
 	 
 </script>
-</body>
+
 @endsection

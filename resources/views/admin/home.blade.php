@@ -1,5 +1,7 @@
 @extends('layouts.admin_layouts')
+@section('act_ad_1','active')
 @section('admin_dash')
+
     <div class="col-lg-4 col-xs-12 col-md-6">
         <div class="panel panel-green">
             <div class="panel-heading">
@@ -159,7 +161,5 @@
             </div>
         </div>
         </div>
-
-
 
 @endsection

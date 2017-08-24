@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cv;
 use Auth;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class employesController extends Controller
 {
@@ -114,6 +115,28 @@ class employesController extends Controller
                     }
                 }
             }
+        }
+    }
+    public function edit_account(){
+	    return view('Les pages.edit_account');
+    }
+    public  function update_avatar(Request $request){
+        if ($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time().'.'. $avatar->getClientOriginalExtension();
+            $path = public_path('/avatar/'.$filename);
+            Image::make($avatar)->resize(300,300)->save($path);
+
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+            return redirect('/personel');
+        }else{
+            $error = 'you are not chose any file';
+            echo "<div class='alert alert-success' role='alert'>
+            <strong>Ooooops !!</strong>
+             $error </div>
+            ";
         }
     }
 }

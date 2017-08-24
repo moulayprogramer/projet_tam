@@ -31,6 +31,8 @@ Route::get('/employes', 'employesController@employes');
 Route::post('/employes', 'employesController@employes');
 Route::get('/show_cv/{id}', 'employesController@show_cv')->middleware('auth');
 Route::post('/recherche_employes','employesController@recherche_employes');
+Route::get('user/edit_account','employesController@edit_account');
+Route::post('user/update_avatar','employesController@update_avatar' );
 
 Route::get('/personel', 'personelController@personel')->middleware('auth');
 Route::get('/page_principale', 'HomeController@page_principale');
@@ -60,6 +62,8 @@ Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showRes
 Route::POST('admin/register','Admin\RegisterController@register');
 Route::GET('admin/register','Admin\RegisterController@showRegistrationForm')->name('admin.register');
 Route::get('register_today_list','AdminController@show_registered_today')->name('show_registered_today_list');
+Route::post('/update_avatar','AdminController@update_avatar' );
+Route::get('/admin/edit_account','AdminController@edit_account');
 //facebook login
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook');
