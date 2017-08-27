@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <a href="/register_today_list">
+            <a href="/register_list">
                 <div class="panel-footer">
                     <span class="pull-left">القوائم</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

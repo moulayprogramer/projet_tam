@@ -62,6 +62,7 @@ Route::GET('admin-password/reset/{token}','Admin\ResetPasswordController@showRes
 Route::POST('admin/register','Admin\RegisterController@register');
 Route::GET('admin/register','Admin\RegisterController@showRegistrationForm')->name('admin.register');
 Route::get('register_today_list','AdminController@show_registered_today')->name('show_registered_today_list');
+Route::get('register_list','AdminController@show_registered')->name('show_registered_list');
 Route::post('/update_avatar','AdminController@update_avatar' );
 Route::get('/admin/edit_account','AdminController@edit_account');
 //facebook login

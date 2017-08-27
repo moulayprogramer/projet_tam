@@ -56,6 +56,11 @@ class AdminController extends Controller
         $arr = Array('user'=>Auth::user(),'registered_today'=> $registered_today);
         return view('admin.admin pages.registered_today_list',$arr);
     }
+    public function show_registered(){
+        $registered =  User::paginate(10);
+        $arr = Array('user'=>Auth::user(),'registered'=> $registered);
+        return view('admin.admin pages.registered_list',$arr);
+    }
 
     /**
      * @param Request $request
