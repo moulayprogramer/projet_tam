@@ -150,7 +150,7 @@
                             <tr>
                                 <td>n</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-link">>></a>
+                                    <a href="#" class="btn btn-sm btn-link"><strong><u>>>>>>></u></strong></a>
                                 </td>
                             </tr>
 
