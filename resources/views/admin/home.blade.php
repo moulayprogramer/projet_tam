@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="/demend_empl_today">
                 <div class="panel-footer">
                     <span class="pull-left">القوائم</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="/cv_list_today">
                 <div class="panel-footer">
                     <span class="pull-left">القوائم</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="/demend_empl">
                 <div class="panel-footer">
                     <span class="pull-left">القوائم</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#">
+            <a href="/cv_list">
                 <div class="panel-footer">
                     <span class="pull-left">القوائم</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

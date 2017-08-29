@@ -65,25 +65,24 @@ class AdminController extends Controller
         $current_date = Carbon::now()->format('Y-m-d');
         $cv_today =  Cv::where('created_at' ,'like' ,$current_date.'%')->paginate(10);
         $arr = Array('user'=>Auth::user(),'cv_today'=> $cv_today);
-        return view('admin.admin pages.registered_today_list',$arr);
+        return view('admin.admin pages.cv_today_list',$arr);
     }
     public function show_cv(){
         $cv =  Cv::paginate(10);
         $arr = Array('user'=>Auth::user(),'cv'=> $cv);
-        return view('admin.admin pages.registered_list',$arr);
+        return view('admin.admin pages.cv_list',$arr);
     }
     public function show_demend_empl_today(){
         $current_date = Carbon::now()->format('Y-m-d');
         $demend_empl_today =  Demend_de_emp::where('created_at' ,'like' ,$current_date.'%')->paginate(10);
         $arr = Array('user'=>Auth::user(),'demend_empl_today'=> $demend_empl_today);
-        return view('admin.admin pages.registered_today_list',$arr);
+        return view('admin.admin pages.demend_empl_today_list',$arr);
     }
     public function show_demend_empl(){
         $demend_empl =  Demend_de_emp::paginate(10);
         $arr = Array('user'=>Auth::user(),'demend_empl'=> $demend_empl);
-        return view('admin.admin pages.registered_list',$arr);
+        return view('admin.admin pages.demend_empl_list',$arr);
     }
-
     /**
      * @param Request $request
      */

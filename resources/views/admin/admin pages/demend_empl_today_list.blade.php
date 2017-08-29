@@ -10,19 +10,24 @@
             <thead>
             <tr>
                 <th>id</th>
-                <th>اسم المستخدم</th>
-                <th>البريد الالكتروني</th>
-                <th>الرقم</th>
-                <th> التعديل</th>
+                <th>id user</th>
+                <th>الوظيفة المطلوبة</th>
+                <th>الولاية</th>
+                <th>رقم الهاتف</th>
+                <th>العنوان</th>
+                <th>الفترة</th>
             </tr>
             </thead>
             <tbody>
-            @foreach( $registered as $uss )
+            @foreach( $demend_empl_today as $det )
                 <tr>
-                    <td>{{ $uss->id }}</td>
-                    <td>{{ $uss->name }}</td>
-                    <td>{{ $uss->email }}</td>
-                    <td>{{ $uss->phone }}</td>
+                    <td>{{ $det->id }}</td>
+                    <td>{{ $det->id_user }}</td>
+                    <td>{{ $det->wadifa }}</td>
+                    <td>{{ $det->wilaya }}</td>
+                    <td>{{ $det->num_t }}</td>
+                    <td>{{ $det->adr }}</td>
+                    <td>{{ $det->fatra }}</td>
                     <td>
                         <a href="#" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-cog"></span> </a>
                     </td>
@@ -30,7 +35,7 @@
             @endforeach
             </tbody>
         </table>
-        {{ $registered->links() }}
+        {{ $demend_empl_today->links() }}
     </div>
 
 

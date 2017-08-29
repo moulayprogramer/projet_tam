@@ -9,20 +9,24 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>id</th>
-                <th>اسم المستخدم</th>
-                <th>البريد الالكتروني</th>
-                <th>الرقم</th>
-                <th> التعديل</th>
+                <th>id cv</th>
+                <th>id user</th>
+                <th>الاسم</th>
+                <th>اللقب</th>
+                <th>المستوى الدراسي</th>
+                <th>العنوان</th>
+                <th>التعديل</th>
             </tr>
             </thead>
             <tbody>
-            @foreach( $registered as $uss )
+            @foreach( $cv_today as $cvv )
                 <tr>
-                    <td>{{ $uss->id }}</td>
-                    <td>{{ $uss->name }}</td>
-                    <td>{{ $uss->email }}</td>
-                    <td>{{ $uss->phone }}</td>
+                    <td>{{ $cvv->id }}</td>
+                    <td>{{ $cvv->id_user }}</td>
+                    <td>{{ $cvv->prenom }}</td>
+                    <td>{{ $cvv->nom }}</td>
+                    <td>{{ $cvv->niveau }}</td>
+                    <td>{{ $cvv->adr }}</td>
                     <td>
                         <a href="#" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-cog"></span> </a>
                     </td>
@@ -30,7 +34,7 @@
             @endforeach
             </tbody>
         </table>
-        {{ $registered->links() }}
+        {{ $cv_today->links() }}
     </div>
 
 

@@ -65,6 +65,10 @@ Route::get('register_today_list','AdminController@show_registered_today')->name(
 Route::get('register_list','AdminController@show_registered')->name('show_registered_list');
 Route::post('/update_avatar','AdminController@update_avatar' );
 Route::get('/admin/edit_account','AdminController@edit_account');
+Route::get('/cv_list_today','AdminController@show_cv_today');
+Route::get('/cv_list','AdminController@show_cv');
+Route::get('/demend_empl_today','AdminController@show_demend_empl_today');
+Route::get('/demend_empl','AdminController@show_demend_empl');
 //facebook login
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider')->name('facebook');
